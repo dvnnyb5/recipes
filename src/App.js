@@ -1,15 +1,16 @@
+// import { useState, CreateContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import NavBar from "./components/nav/NavBar";
 import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
         </Switch>
       </Router>
     </div>
