@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { signInWithEmailPassword } from "../../firebase/firebase"; // Import sign-in function
 import { useHistory } from "react-router-dom";
+import { signInWithEmailPassword } from "../../firebase/firebase";
+
+import "../../styles/login.scss";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -16,8 +18,7 @@ const Login = () => {
 
     try {
       await signInWithEmailPassword(email, password);
-      alert("Login successful!");
-      history.push("/"); // Redirect to homepage after successful login
+      history.push("/home");
     } catch (error) {
       setError("Failed to sign in. Please check your credentials.");
     }
@@ -27,9 +28,10 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <div className="login-wrapper">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="email-wrapper">
           <label>Email</label>
           <input
             type="email"
@@ -39,14 +41,14 @@ const Login = () => {
           />
         </div>
 
-        <div>
+        <div className="password-wrapper">
           <label>Password</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
+            />
         </div>
 
         {error && <p className="error-message">{error}</p>}
@@ -55,6 +57,7 @@ const Login = () => {
           {loading ? "Signing in..." : "Login"}
         </button>
       </form>
+      </div>
     </div>
   );
 };

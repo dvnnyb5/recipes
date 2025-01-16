@@ -5,13 +5,13 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_I",
+  apiKey: "AIzaSyCcU9oIHrEee1oe5_2zkY7uTMJb89g9cEQ",
+  authDomain: "pantry-vault.firebaseapp.com",
+  projectId: "pantry-vault",
+  storageBucket: "pantry-vault.appspot.com",
+  messagingSenderId: "280395747456",
+  appId: "1:280395747456:web:cfa05fe0bb49c640671665",
+  measurementId: "G-HW2HG8ZEZZ"
 };
 
 const app = initializeApp(firebaseConfig);

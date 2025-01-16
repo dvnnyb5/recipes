@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getAllRecipes } from "../../firebase/firebaseUtils";
 import AddRecipeModal from "../AddRecipeModal";
 
-import "../../styles/home.scss"; // Create this file for styling
+import "../../styles/home.scss";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-section">
-        <h1>Welcome to My Recipes</h1>
+        <h1>Welcome to Your Recipes</h1>
         {/*carousel goes here */}
       </div>
 
